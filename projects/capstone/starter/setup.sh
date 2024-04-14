@@ -1,1 +1,5 @@
-FLASK_APP=app.py FLASK_DEBUG=true flask run
+#!/bin/bash
+echo 'Test'
+export FLASK_APP=app.py
+export FLASK_DEBUG=true
+flask run
