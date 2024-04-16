@@ -9,11 +9,9 @@ from backend.settings import DB_NAME, DB_USER, DB_PASSWORD, DB_URL
 database_filename = "database.db"
 project_dir = os.path.dirname(os.path.abspath(__file__))
 database_name = DB_NAME
-database_path = 'postgresql://{}:{}@{}/{}'.format(DB_USER,DB_PASSWORD,DB_URL, database_name)
+database_path = 'postgresql://{}/{}'.format(DB_URL, database_name)
 
 db = SQLAlchemy()
-print(DB_NAME)
-print(DB_USER)
 print(DB_URL)
 
 '''
