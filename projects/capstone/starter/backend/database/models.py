@@ -1,10 +1,9 @@
 import os
 
-from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 import json
 
-from backend.settings import DB_NAME, DB_USER, DB_PASSWORD, DB_URL
+from .settings import DB_NAME, DB_USER, DB_PASSWORD, DB_URL
 
 database_filename = "database.db"
 project_dir = os.path.dirname(os.path.abspath(__file__))
