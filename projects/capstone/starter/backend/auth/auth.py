@@ -1,3 +1,4 @@
+import os
 import json
 import ssl
 from flask import request, _request_ctx_stack
@@ -7,10 +8,13 @@ from urllib.request import urlopen
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
-AUTH0_DOMAIN = 'dev-3tjxoaiy36qsqjia.uk.auth0.com'
-ALGORITHMS = ["RS256"]
-API_AUDIENCE = 'capstone'
+AUTH0_DOMAIN = os.environ.get('AUTH0_DOMAIN')
+ALGORITHMS = os.environ.get('ALGORITHMS')
+API_AUDIENCE = os.environ.get('API_AUDIENCE')
 
+print(os.environ.get('AUTH0_DOMAIN'))
+print(os.environ.get('ALGORITHMS'))
+print(ALGORITHMS)
 ## AuthError Exception
 '''
 AuthError Exception
